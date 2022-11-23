@@ -1,0 +1,37 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 40px;
+  z-index: 2;
+}
+.nav-logo img {
+  width: 110px;
+  object-fit: contain;
+}
+.nav-links {
+  display: flex;
+  gap: 0.4em;
+}
+.first {
+  padding-left: 135px;
+}
+
+.nav-links div h1 {
+  padding: 9px 15px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+.nav-links div h1:hover {
+  background-color: var(--light-hover);
+}
+.nav-last {
+  display: flex;
+}
