@@ -1,10 +1,133 @@
 .section {
-  width: 100vw;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  overflow-y: scroll;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.section img {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+
+.section::-webkit-scrollbar {
   display: block;
+  width: 13px;
+}
+.section::-webkit-scrollbar-thumb {
+  background-color: var(--sidebar);
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+section img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+section h1 {
+  position: absolute;
+  top: 16.5%;
+  font-size: 2.5em;
+  z-index: 3;
+  color: var(--black-txt);
+}
+section p {
+  position: absolute;
+  top: 22%;
+  font-size: 0.85em;
+  z-index: 3;
+  padding-bottom: 2px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--black-txt);
+  transition: all 200ms linear;
+  letter-spacing: 0.5px;
+}
+section p:hover {
+  border-bottom: 2px solid var(--black-txt);
+}
+.section-btns {
+  position: absolute;
+  top: 80%;
+  display: flex;
+  gap: 2em;
+}
+.last-btn {
+  position: absolute;
+  top: 80%;
+  display: flex;
+  gap: 2em;
+}
+.last-btn span:nth-child(1) {
+  padding: 12px 80px;
+  background-color: var(--black-btn);
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 0.9em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.section-btns span:nth-child(1) {
+  padding: 12px 90px;
+  background-color: var(--black-btn);
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 0.9em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.section-btns span:nth-child(2) {
+  padding: 12px 70px;
+  background-color: var(--white-btn);
+  color: black;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 0.9em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.arrow-icon {
+  position: absolute;
+  top: 90%;
+  cursor: pointer;
+  animation: arrow 3s linear infinite forwards;
+}
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 650px) {
+  .section-btns span:nth-child(1) {
+    padding: 12px 80px;
+  }
+  .section-btns span:nth-child(2) {
+    padding: 12px 50px;
+  }
+  .section-btns {
+    top: 75%;
+    flex-direction: column;
+    gap: 1em;
+  }
 }

@@ -8,7 +8,7 @@ function Navbar() {
       <div className="nav-logo">
         <img src={tsla} alt="tesla_logo" />
       </div>
-      <div className="nav-links first">
+      <div className="nav-links-first">
         <div>
           <h1>Model S</h1>
         </div>
@@ -28,13 +28,18 @@ function Navbar() {
           <h1>Solar Panels</h1>
         </div>
       </div>
-      <div className="nav-links">
+      <div className="nav-links-second">
         <div>
           <h1>Shop</h1>
         </div>
         <div>
           <h1>Account</h1>
         </div>
+        <div>
+          <h1>Menu</h1>
+        </div>
+      </div>
+      <div className="nav-links-last">
         <div>
           <h1>Menu</h1>
         </div>
