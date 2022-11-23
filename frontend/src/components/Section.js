@@ -3,13 +3,10 @@ import React from "react";
 import { Sections } from "./Sections";
 import { BiDownArrowAlt } from "react-icons/bi";
 
-// import { useWindowScrollPosition } from "../hooks/ScrollHook";
 import "./css/section.css";
 import Footer from "./Footer";
 
 function Section() {
-  // const { scrollX, scrollY } = useWindowScrollPosition();
-
   return (
     <div className="section">
       {Sections.map((section) => {

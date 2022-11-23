@@ -15,3 +15,11 @@
   --light-hover: hsla(0, 0%, 0%, 0.07);
   --sidebar: hsla(0, 0%, 0%, 0.3);
 }
+body {
+  user-select: none;
+  -webkit-user-select: none;
+}
+h1,
+p {
+  pointer-events: none;
+}
