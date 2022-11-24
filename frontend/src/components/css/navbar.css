@@ -1,26 +1,31 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
-  width: 100vw;
+  left: 0;
+  right: 0;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px 40px;
+  padding: 12px 40px;
   z-index: 2;
 }
 .nav-logo img {
   width: 110px;
   object-fit: contain;
 }
-.nav-links {
+.nav-links-first {
+  display: flex;
+  gap: 0.4em;
+  padding-left: 135px;
+}
+.nav-links-second {
   display: flex;
   gap: 0.4em;
 }
-.first {
-  padding-left: 135px;
-}
 
-.nav-links div h1 {
+.nav-links-first div h1,
+.nav-links-second div h1 {
   padding: 9px 15px;
   border-radius: 5px;
   font-size: 0.8em;
@@ -29,9 +34,130 @@
   cursor: pointer;
   transition: all 200ms linear;
 }
-.nav-links div h1:hover {
+.nav-links-first div h1:hover,
+.nav-links-second div h1:hover {
   background-color: var(--light-hover);
 }
 .nav-last {
   display: flex;
+}
+.nav-links-last {
+  display: none;
+}
+.nav-links-last div h1 {
+  padding: 9px 15px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 200ms linear;
+  background-color: var(--light-hover);
+}
+
+/* for model */
+.model {
+  position: fixed;
+  width: 310px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 1003;
+  display: flex;
+  flex-direction: column;
+  animation: model 700ms linear forwards;
+  transform: translateX(100%);
+}
+@keyframes model {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+.close {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+  width: 100%;
+  padding: 10px 10px 50px 40px;
+}
+.close-icon {
+  padding: 8px;
+  cursor: pointer;
+  transition: all 150ms linear;
+  border-radius: 5px;
+}
+.close-icon:hover {
+  background-color: var(--light-hover);
+}
+.children {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 0 0 40px 0;
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.children::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+.children::-webkit-scrollbar-thumb {
+  background-color: var(--sidebar);
+  border-radius: 5px;
+}
+.Sidelinks {
+  display: flex;
+  gap: 0.5em;
+  padding: 9px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 150ms linear;
+}
+.Sidelinks:hover {
+  background-color: var(--light-hover);
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+.flex p {
+  font-size: 0.7em;
+  letter-spacing: 0.5px;
+  color: var(--footer-txt);
+  pointer-events: none;
+}
+.Sidelinks h1 {
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+  .nav-links-first,
+  .nav-links-second {
+    display: none;
+  }
+  .nav-links-last {
+    display: block;
+  }
 }
