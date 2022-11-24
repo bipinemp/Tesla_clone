@@ -19,7 +19,3 @@ body {
   user-select: none;
   -webkit-user-select: none;
 }
-h1,
-p {
-  pointer-events: none;
-}
