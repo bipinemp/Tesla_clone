@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Sections } from "./Sections";
-import { BiDownArrowAlt } from "react-icons/bi";
+import { AiOutlineDown } from "react-icons/ai";
 
 import "./css/section.css";
 import Footer from "./Footer";
@@ -17,7 +17,7 @@ function Section() {
               alt={section.name}
               style={{ width: section.last ? "500px" : "" }}
             />
-            <h1 style={{ marginLeft: section.last && "40px", top: "14%" }}>
+            <h1 style={{ marginLeft: section.last && "40px" }}>
               {section.name}
             </h1>
             {!section.last && (
@@ -38,9 +38,9 @@ function Section() {
             </div>
             {section.scroll && (
               <span className="arrow-icon">
-                <BiDownArrowAlt
+                <AiOutlineDown
                   className="arrow-icon"
-                  fontSize="30px"
+                  fontSize="25px"
                   fill="var(--footer-txt)"
                 />
               </span>
