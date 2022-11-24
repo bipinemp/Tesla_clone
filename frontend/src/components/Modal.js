@@ -10,7 +10,11 @@ export default function Modal({ open, onClose, children }) {
       <div className="overlay" />
       <div className="model">
         <div className="close" onClick={onClose}>
-          <GrClose className="close-icon" fontSize="40px" />
+          <GrClose
+            className="close-icon"
+            fontSize="35px"
+            fill="var(--footer-txt)"
+          />
         </div>
         <div className="children">{children}</div>
       </div>

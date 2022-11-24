@@ -16,7 +16,10 @@
   --light-hover: hsla(0, 0%, 0%, 0.07);
   --sidebar: hsla(0, 0%, 0%, 0.3);
 }
-body {
-  user-select: none;
-  -webkit-user-select: none;
+body::-webkit-scrollbar {
+  display: block;
+  width: 13px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--sidebar);
 }

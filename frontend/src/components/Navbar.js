@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import tsla from "../assets/tsla.png";
 import "./css/navbar.css";
 import Modal from "./Modal";
@@ -7,6 +7,7 @@ import { TbWorld } from "react-icons/tb";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [side, setSide] = useState(false);
 
   return (
     <>
@@ -47,10 +48,23 @@ function Navbar() {
         </div>
         <div className="nav-links-last">
           <div>
-            <h1 onClick={() => setIsOpen(true)}>Menu</h1>
+            <h1
+              onClick={() => {
+                setIsOpen(true);
+                setSide(false);
+              }}
+            >
+              Menu
+            </h1>
           </div>
         </div>
-        <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+        <Modal
+          open={isOpen}
+          onClose={() => {
+            setIsOpen(false);
+            setSide(false);
+          }}
+        >
           {SideLinks.map((link) => {
             return (
               <div className="Sidelinks">

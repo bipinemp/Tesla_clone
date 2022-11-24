@@ -11,15 +11,16 @@ function Section() {
     <div className="section">
       {Sections.map((section) => {
         return (
-          <section>
-            <img
-              src={section.model}
-              alt={section.name}
-              style={{ width: section.last ? "500px" : "" }}
-            />
-            <h1 style={{ marginLeft: section.last && "40px" }}>
-              {section.name}
-            </h1>
+          <section
+            style={{
+              background: `url(${section.model})`,
+              height: "100vh",
+              backgroundSize: section.last ? "contain" : "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
+          >
+            <h1>{section.name}</h1>
             {!section.last && (
               <p>
                 {section.namesec ? section.namesec : "Schedule a Test Drive"}
@@ -28,7 +29,6 @@ function Section() {
             <div className={section.last ? "last-btn" : "section-btns"}>
               <span
                 style={{
-                  marginLeft: section.last && "30px",
                   backgroundColor: section.last && "#171a20",
                 }}
               >
