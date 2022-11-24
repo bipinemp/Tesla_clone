@@ -77,7 +77,8 @@ section p:hover {
 }
 .section-btns {
   position: absolute;
-  top: 80%;
+  top: 78%;
+  margin: 0 auto;
   display: flex;
   gap: 4em;
   opacity: 0;
@@ -117,7 +118,7 @@ section p:hover {
   cursor: pointer;
 }
 .section-btns span:nth-child(1) {
-  padding: 12px 90px;
+  padding: 11px 70px;
   background-color: var(--black-btn);
   color: white;
   font-weight: bold;
@@ -127,7 +128,7 @@ section p:hover {
   cursor: pointer;
 }
 .section-btns span:nth-child(2) {
-  padding: 12px 70px;
+  padding: 11px 55px;
   background-color: var(--white-btn);
   color: black;
   font-weight: bold;
@@ -139,6 +140,7 @@ section p:hover {
 .arrow-icon {
   position: absolute;
   top: 90%;
+  left: 48.1%;
   cursor: pointer;
   animation: arrow 3s linear infinite forwards;
 }
