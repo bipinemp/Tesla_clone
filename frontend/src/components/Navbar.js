@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import tsla from "../assets/tsla.png";
 import "./css/navbar.css";
 import Modal from "./Modal";
@@ -7,7 +7,6 @@ import { TbWorld } from "react-icons/tb";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [side, setSide] = useState(false);
 
   return (
     <>
@@ -51,7 +50,6 @@ function Navbar() {
             <h1
               onClick={() => {
                 setIsOpen(true);
-                setSide(false);
               }}
             >
               Menu
@@ -62,7 +60,6 @@ function Navbar() {
           open={isOpen}
           onClose={() => {
             setIsOpen(false);
-            setSide(false);
           }}
         >
           {SideLinks.map((link) => {
