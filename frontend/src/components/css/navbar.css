@@ -87,7 +87,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  height: 5%;
+  height: 10vh;
   display: flex;
   justify-content: flex-end;
   background-color: white;
@@ -111,13 +111,13 @@
   flex-direction: column;
   gap: 0.5em;
   margin: 0 0 40px 0;
-  height: 95%;
+  height: 90vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 .children::-webkit-scrollbar {
   display: block;
-  width: 10px;
+  width: 5px;
 }
 .children::-webkit-scrollbar-thumb {
   background-color: var(--sidebar);
