@@ -43,7 +43,7 @@ section h1 {
 section p {
   position: absolute;
   top: 26%;
-  font-size: 0.85em;
+  font-size: 0.8em;
   z-index: 3;
   padding-bottom: 2px;
   cursor: pointer;
@@ -67,7 +67,7 @@ section p {
     opacity: 1;
   }
   100% {
-    top: 22%;
+    top: 23%;
     opacity: 1;
   }
 }
@@ -140,7 +140,7 @@ section p:hover {
 .arrow-icon {
   position: absolute;
   top: 90%;
-  left: 48.1%;
+  left: 49.35%;
   cursor: pointer;
   animation: arrow 3s linear infinite forwards;
 }
@@ -194,6 +194,6 @@ section p:hover {
     }
   }
   .arrow-icon {
-    top: 82%;
+    top: 87%;
   }
 }
