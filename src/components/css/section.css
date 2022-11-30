@@ -126,6 +126,7 @@ section p:hover {
   font-size: 0.9em;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
 }
 .section-btns span:nth-child(2) {
   padding: 11px 55px;
@@ -136,6 +137,7 @@ section p:hover {
   font-size: 0.9em;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
 }
 .arrow-icon {
   position: absolute;
