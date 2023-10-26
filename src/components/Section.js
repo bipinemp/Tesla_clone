@@ -4,7 +4,6 @@ import { Sections } from "./Sections";
 import { AiOutlineDown } from "react-icons/ai";
 
 import "./css/section.css";
-import Footer from "./Footer";
 
 function Section() {
   return (
@@ -45,7 +44,6 @@ function Section() {
                 />
               </span>
             )}
-            {section.last && <Footer />}
           </section>
         );
       })}
