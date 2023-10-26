@@ -24,3 +24,8 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: var(--sidebar);
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
